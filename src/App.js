@@ -1,24 +1,48 @@
-import { FeedbackList} from './components/FeedbackList';
+import { FeedbackList } from './components/FeedbackList';
 import { Header } from './components/Header';
-import { useState } from 'react';
-import { FeedbackData } from './data/FeedbackData';
+import { FeedbackStats } from './components/FeedbackStats';
+import { FeedbackForm } from './components/FeedbackForm';
+import { About } from './routes/About'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { AboutIconLink } from "./components/AboutIconLink";
+import { FeedbackProvider} from "./context/FeedbackContext";
 import './index.css'
+
 
 function App() {
 
-  const [feedback, setFeedback] = useState(FeedbackData)
+ 
+
+
+  
+
+
   return (
 
     <>
-    <Header />
-    <div className="container">
-  
+    <FeedbackProvider>
+      <Router>
+        <Header />
+        <div className="container">
+          <Routes>
+            <Route exact path='/' element={
+              <>
+                <FeedbackForm />
+                <FeedbackStats  />
+                <FeedbackList  />
+              </>
+            }>
 
-    <FeedbackList feedback={feedback} />
-   
-    </div>
+            </Route>
+            <Route path='/about' element={<About />}/>
+            
+          </Routes>
+          <AboutIconLink />
+        </div>
+      </Router>
+      </FeedbackProvider>
     </>
-    
+
   );
 }
 

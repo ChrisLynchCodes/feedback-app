@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
+
 export const Header = ({ text, bgcolour, textColour }) => {
 
     const headerStyles = {
@@ -23,9 +24,9 @@ export const Header = ({ text, bgcolour, textColour }) => {
 // ======Default Props & PropTypes======
 
 Header.defaultProps = {
-    text: "Feedback Header",
-    bgcolour: "rgba(0,0,0,0.4)",
-    textColour: "#ff6a95"
+    text: "Reviews",
+    bgcolour: "rgba(0,0,0,0.5)",
+    textColour: "#E94B3CFF"
 }
 Header.propTypes = {
     text: PropTypes.string,
