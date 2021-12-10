@@ -1,14 +1,9 @@
 {
   "feedback": [
     {
-      "id": 1,
+      "text": "Happy with it",
       "rating": 10,
-      "text": "Good product"
-    },
-    {
-      "id": 2,
-      "rating": 1,
-      "text": "Bad product"
+      "id": 2
     },
     {
       "id": 3,
@@ -21,14 +16,9 @@
       "text": "Nice"
     },
     {
-      "text": "this is a test",
-      "rating": 5,
-      "id": 5
-    },
-    {
-      "text": "this is another test",
-      "rating": 2,
-      "id": 6
+      "text": "best of the best",
+      "rating": 10,
+      "id": 7
     }
   ]
 }

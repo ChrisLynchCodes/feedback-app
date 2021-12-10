@@ -25,8 +25,19 @@ export const FeedbackProvider = ({ children }) => {
         setFeedback(data);
         setIsLoading(false);
     }
-    const updateFeedback = (id, updatedItem) => {
-        setFeedback(feedback.map((item) => item.id === id ? { ...item, ...updatedItem } : item))
+    const updateFeedback = async (id, updatedItem) => {
+        
+        const response = await fetch(`/feedback/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedItem)
+        })
+
+        const data = await response.json();
+
+        setFeedback(feedback.map((item) => item.id === id ? { ...item, ...data } : item))
     }
 
     //Set item to edit
@@ -37,7 +48,15 @@ export const FeedbackProvider = ({ children }) => {
         })
     }
 
-    const deleteFeedback = (id) => {
+    const deleteFeedback = async (id) => {
+
+        await fetch(`/feedback/${id}`,
+        {
+            method: 'DELETE'
+           
+
+        } 
+        )
 
         //Return an array minus the element with the specififed id
         setFeedback(feedback.filter((item) => item.id !== id))
