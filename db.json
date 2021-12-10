@@ -21,13 +21,13 @@
       "text": "Nice"
     },
     {
-      "id": 5,
-      "rating": 3,
-      "text": "Could be better"
+      "text": "this is a test",
+      "rating": 5,
+      "id": 5
     },
     {
-      "rating": 9,
-      "text": "Really liked it",
+      "text": "this is another test",
+      "rating": 2,
       "id": 6
     }
   ]
