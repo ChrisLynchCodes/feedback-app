@@ -11,4 +11,4 @@
 
 #### npm run dev to start React app on localhost:3000 & JSON Server on localhost:5000
 
-[The App](https://i.imgur.com/3OKMNzm.png)
+!The App](https://i.imgur.com/3OKMNzm.png)
